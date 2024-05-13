@@ -1,0 +1,8 @@
+version: '3'
+services:
+  demogolang:
+    build: .
+    environment:
+      - APP_ENV=develop
+    volumes:
+      - ./app:/usr/src/app
