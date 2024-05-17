@@ -1,6 +1,7 @@
 version: '3'
 services:
   demogolang:
+    container_name: demogolang
     build: .
     environment:
       - APP_ENV=develop

@@ -5,6 +5,11 @@ ENV WORDIR_APP /usr/src
 ENV BINARY_NAME main
 ENV BINARY_PATH ${WORDIR_APP}/${BINARY_NAME}
 
+ENV APP_LOG_LEVEL debug
+ENV APP_LOG_FOLDER /tmp/logs/
+
+RUN mkdir -p ${APP_LOG_FOLDER}
+
 WORKDIR ${WORDIR_APP}
 COPY app/go.mod app/run.sh ./
 

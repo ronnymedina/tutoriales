@@ -1,13 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"example/demogo/utils"
 	"time"
 )
 
 func main() {
+	defer utils.Logger.Sync()
+
 	for {
-		time.Sleep(3 * time.Second)
-		fmt.Println("hello world")
+		time.Sleep(5 * time.Second)
+		utils.Logger.Infoln("hello world")
 	}
 }
