@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nest-setup:
+    container_name: nest-setup
+    build: .
+    ebvironment:
+      - NODE_ENV=develop
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/var/prod/src
+      - ./test:/var/prod/test
+      - ./package.json:/var/prod/package.json
